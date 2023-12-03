@@ -90,7 +90,7 @@ public class EngineSchematicPartOne {
 		String line;
 		
 		while(input.hasNextLine()) {
-			line input.nextLine();
+			line = input.nextLine();
 			myArr[row] = new char[COLSIZE];
 			for(int i = 0; i < line.length(); i++)
 			{
