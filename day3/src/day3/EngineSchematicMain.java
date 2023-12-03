@@ -11,7 +11,7 @@ public class EngineSchematicMain {
 		try {
 			Scanner sc = new Scanner(input);
 			
-			EngineSchematicPartOne.findSumOfPartNumbers(sc);
+			System.out.println(EngineSchematicPartOne.findSumOfPartNumbers(sc));
 			
 		} catch (FileNotFoundException e) {
 			System.out.println("File cannot found.");
