@@ -12,7 +12,6 @@ public class CubeGamePartOne {
 		{
 			if(!isPossibleForCubes(revealsList.get(i)))
 			{
-				System.out.println(revealsList.get(i) + " is not possible!");
 				return false;
 			}
 		}
@@ -22,15 +21,16 @@ public class CubeGamePartOne {
 	public static boolean isPossibleForCubes(String reveal) {
 		String[] cubes = reveal.split(",");
 		for(String cube : cubes) {
-			if(cube.contains("red") && Integer.parseInt(cube.replaceAll("[\\D]", "")) > 12)
+			int num = Integer.parseInt(cube.replaceAll("[\\D]", ""));
+			if(cube.contains("red") && num > 12)
 			{
 				return false;
 			}
-			else if(cube.contains("green") && Integer.parseInt(cube.replaceAll("[\\D]", "")) > 13)
+			else if(cube.contains("green") && num > 13)
 			{
 				return false;
 			}
-			else if(Integer.parseInt(cube.replaceAll("[\\D]", "")) > 14)
+			else if(num > 14)
 			{
 				return false;
 			}
@@ -43,14 +43,11 @@ public class CubeGamePartOne {
 		try {
 			Scanner inputReader = new Scanner(input);
 			int result = 0;
-			String line;
 			
 			while(inputReader.hasNextLine())
 			{
 				ArrayList<String> revealsList = new ArrayList<String>();
-				line = inputReader.nextLine();
-				
-				System.out.println(line);
+				String line = inputReader.nextLine();
 				
 				String[] reveals = line.split(":|;");
 				for(String reveal : reveals)
@@ -60,10 +57,9 @@ public class CubeGamePartOne {
 				
 				if(isPossibleForGame(revealsList))
 					result += Integer.parseInt(revealsList.get(0).replaceAll("[\\D]", ""));
-				
-				
-				System.out.println("Total: " + result);
 			}
+			
+			System.out.println("Total: " + result);
 			inputReader.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found.");
