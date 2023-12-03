@@ -87,14 +87,14 @@ public class EngineSchematicPartOne {
 	public static char[][] getTwoDimArray(Scanner input) {
 		int row = 0;
 		char[][] myArr = new char[ROWSIZE][];
-		String[] lines = new String[ROWSIZE];
+		String line;
 		
 		while(input.hasNextLine()) {
-			lines[row] = input.nextLine();
+			line input.nextLine();
 			myArr[row] = new char[COLSIZE];
-			for(int i = 0; i < lines[row].length(); i++)
+			for(int i = 0; i < line.length(); i++)
 			{
-				myArr[row][i] = lines[row].charAt(i);
+				myArr[row][i] = line.charAt(i);
 			}
 			row++;
 		}
