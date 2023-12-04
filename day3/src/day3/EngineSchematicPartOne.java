@@ -107,6 +107,5 @@ public class EngineSchematicPartOne {
 		myArr = getTwoDimArray(input);
 		
 		return calculate(myArr);
-		
 	}
 }

@@ -1,23 +1,18 @@
-package day3;
+package day4;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class EngineSchematicMain {
+public class FlashCardsMain {
 
 	public static void main(String[] args) {
 		File input = new File("input.txt");
 		try {
 			Scanner sc = new Scanner(input);
-			
-//			System.out.println(EngineSchematicPartOne.findSumOfPartNumbers(sc));
-			
-			EngineSchematicPartTwo.findSumGears(sc);
-			
+			FlashCardsPartOne.calculateTotalPoints(sc);
 		} catch (FileNotFoundException e) {
-			System.out.println("File cannot found.");
-			e.printStackTrace();
+			System.out.println("File not found!");
 		}
 
 	}
