@@ -63,11 +63,10 @@ public class FlashCardsPartOne {
 			
 			for(int num: hasNumsArr)
 			{
-				System.out.println("Hasnumsarr" + num);
 				if(existsInArr(winningNumsArr, num))
 				{
 					lineWorth *= 2;
-					System.out.println("Found " + num);
+//					System.out.println("Found " + num);
 				}
 			}
 			
