@@ -10,7 +10,10 @@ public class FlashCardsMain {
 		File input = new File("input.txt");
 		try {
 			Scanner sc = new Scanner(input);
-			FlashCardsPartOne.calculateTotalPoints(sc);
+			
+			System.out.println(FlashCardsPartOne.calculateTotalPoints(sc));
+			
+			
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found!");
 		}

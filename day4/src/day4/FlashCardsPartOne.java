@@ -79,16 +79,9 @@ public class FlashCardsPartOne {
 	public static int calculateTotalPoints(Scanner input)
 	{
 		readFromFile(input);
-		System.out.println(calculate());
-//		for(int i = 0; i < hasNums.size(); i++)
-//		{
-//			int[] arr = hasNums.get(i);
-//			for(int j = 0; j < arr.length; j++)
-//				System.out.print("[" + arr[j] +"]");
-//			System.out.println();
-//		}
+		int result = (int)calculate();
 		
-		return 1;
+		return result;
 	}
 	
 }
